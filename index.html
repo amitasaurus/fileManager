@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="fileManager" >
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<meta charset="UTF-8">
+		<meta https-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1 , maximum-scale=1 , user-scalable=no">
+
+		  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+  		<!-- Angular Material style sheet -->
+  		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!-- My Stylesheets -->
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+
+
+<body ng-cloak ng-controller="mainCtrl" layout="column">
+  
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+      <button class="md-button md-ink-ripple hide-gt-sm layout-align-center-center layout-row" type="button" ng-click="toggleSidenav()" aria-label="Side Panel" layout="row" layout-align="center center">
+      <md-icon class="material-icons">menu</md-icon>
+      </button>
+        <h2 flex md-truncate>File Manager</h2>
+      </div>
+    </md-toolbar>
+    <div layout="row" flex>
+    <div ng-include="'assets/views/sidenav.html'" layout="column"></div>
+    <md-content flex layout-padding>
+      <ng-view></ng-view>
+    </md-content>
+
+
+  <!-- Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="assets/js/ng-file-upload-shim.min.js"></script>
+  <script src="assets/js/ng-file-upload.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
+  <script src="assets/js/ng-fx.min.js"></script>
+  <!-- application bootstrap  -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controllers/mainCtrl.js"></script>
+  <script src="assets/js/controllers/uploadCtrl.js"></script>
+  <script src="assets/js/controllers/allFilesCtrl.js"></script>
+  <script src="assets/js/services/dataService.js"></script>
+  <script src="assets/js/services/dialogService.js"></script>
+</body>
+</html>

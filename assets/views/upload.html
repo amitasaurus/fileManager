@@ -1,0 +1,12 @@
+ <md-content class="md-padding" layout="column" layout-align="center center">
+ 	 <h1>Upload a file</h1>
+      <md-button style="padding: 0px;margin: 0px;" aria-label="file upload" ngf-select="uploadFiles($files)" multiple="multiple">
+      <md-card style="width: 300px;margin: 0px;" md-whiteframe="8" ng-click="uploader()">
+        <img ng-src="assets/upload.jpg" class="md-card-image" alt="Upload">
+      </md-card>
+      </md-button>
+      </br>
+       <md-progress-linear md-mode="determinate" value="{{determinateValue}}" style="
+    width: 300px;
+" ng-if="!!determinateValue"></md-progress-linear>
+  </md-content>

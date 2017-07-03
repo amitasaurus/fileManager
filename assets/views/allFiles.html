@@ -1,0 +1,14 @@
+<div layout="row" layout-wrap layout-align="start center" layout-padding ng-cloak>
+		<div ng-repeat="item in items" class="fx-fade-up fx-speed-{{500 + $index * 200}} fx-easing-back">
+			<md-card md-whiteframe="4" ng-click="openDocument($event, item)" style="width: 125px;">
+	        <md-card-title>
+	          <md-card-title-media style="margin: 0 auto;">
+	            <img src="https://amitasaurus.github.io/documentReader/word.png">
+	          </md-card-title-media>
+	        </md-card-title>
+	        <md-card-content>
+	        <p flex md-truncate style="text-align: center;">{{item.name}}</p>
+	        </md-card-content>
+	      	</md-card>
+		</div>
+</div>

@@ -1,0 +1,16 @@
+
+<md-dialog aria-label="{{current.name}}">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{current.name + '.' + current.type}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon class="material-icons">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <iframe src="{{url | trustAsResourceUrl}}" width='100%' frameborder='0'></iframe>
+    </md-dialog-content>
+</md-dialog>
