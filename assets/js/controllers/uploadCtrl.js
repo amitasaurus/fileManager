@@ -12,10 +12,12 @@
   			
 		   	$scope.uploader = function(){
 		   		$scope.uploadFiles = function(files) {
+				if (files && files.length) {
+				for (var i = 0; i < files.length; i++) {
 				Upload.upload({
 					url: 'upload/url', //add post method here
 					data: {
-						file: files
+						file: files[i]
 						}
 				}).then(function(resp) {
 					var msg = 'Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data;
@@ -28,7 +30,10 @@
 					$scope.determinateValue = parseInt(100.0 * evt.loaded / evt.total);
 					console.log('progress: ' + $scope.determinateValue + '% ' + evt.config.data.file.name);
 				});
-			};
-		   	}
+			 }
+			}
+		  }
+		};
+
 		   }]);
 })();
